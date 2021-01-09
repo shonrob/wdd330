@@ -1,0 +1,48 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Raleway&display=swap');
+
+html {
+    background-color: #433847;
+}
+body {
+    background-color:#DBDED7;
+    margin: 5%;
+    padding: 2%;
+    border-radius: 5px;
+}
+h1 {
+    color: #4C494D;
+    background-color: #A59AA6;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.5rem;
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+h2 {
+    color: #4C494D;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+div{
+    margin: 0;
+}
+
+a {
+    color: #726A75;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 0;
+}
+
+li a:hover {
+    transition: transform .5s;
+    font-size: 1.15rem;
+}
+
