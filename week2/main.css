@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&family=Raleway&display=swap');
+
+html {
+    background-color: #433847;
+}
+
+body {
+    background-color:#DBDED7;
+    margin: 5%;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+p {
+    text-indent: 50px;
+    color: #726A75;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    color: #4C494D;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+h3 {
+    margin-left: 3%;
+}
+
+h4 {
+    margin-left: 3.5%;
+}
+
+li {
+    list-style-type: circle;
+    color: #433847;
+    margin: 0 0 0 10%;
+    color: #726A75;
+    font-family: 'Raleway', sans-serif;
+}
