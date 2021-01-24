@@ -3,9 +3,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 3 Functions, Objects</title>
+    <link rel="stylesheet" href="../week2/main.css" />
 </head>
 <body>
-    
+    <h2>Notes</h2>
+    <h3>Chapter 5-Objects</h3>
+    <ul>
+        <li>An object in js that is self-contained set of related values and funtions.</li>
+        <li>A property's value is a function called a method</li>
+        <li>A new property can be added to an object using a symbol as a key if the square bracket notation is used.</li>
+        <li>Nested Objects- it is possible to for an object to contain other objects</li>
+        <li>Objects are copied by reference- that means objects are assigned by reference..the object already exists..in the exact same space in memory.</li>
+        <li>Object literals can be passed as a parameter to a function.</li>
+        <li><i>this</i> refers to the object that it is within. It can be used inside methods to gain access to the object's properties.</li>
+        <li>JSON: Property names must be double quoted. Permitted values are double-quoted strings, numbers, true, false, null, arrays, and objects.  Functions are not permitted values.</li>
+        <li>There are built in math objects</li>
+        <li>There are date objects</li>
+        <li>Getter Methods</li>
+        <li>Setter Methods</li>
+        <li>RegExp Methods--for setting up passwords and such</li>
+    </ul>
+    <h3>The Document Object Model</h3>
+    <ul>
+        <li>Document Object Model (DOM) allows access to elements of a web page and enables interaction with the page by adding and removing elements, changing the order of content and attributes of elements and even altering how they are styled.</li>
+        <li>The DOM treats everything on the web page as a node.</li>
+        <li>Use JavaScript to access and modify different parts of a web page using a special built-in object called <i>document</i></li>
+        <li>Tips for using the console: pressing TAB will autocomplete any methods and should show you a list of a possible methods..Pressing the UP arrow key will select the previous command entered.</li>
+        <li>to reference a body element we can write <i>typeof</i></li>
+        <li>Legacy DOM Shortcut Methods: Document.body, Document.images, Document.links, Document.anchors, Document.forms</li>
+        <li>Node lists are array like objects but they are not arrays.</li>
+        <li>getElementsById()</li>
+        <li>getElementsByTagName()</li>
+        <li>getElementsByClassName()</li>
+        <li>document.querySelector() : method allows you to use CSS notation to find the first element in the document that matches a CSS selector provided as an argument.  If no elements match, it will return <i>null</i></li>
+        <li>document.querySelectorAll(): methods that gets all elements</li>
+        <li>getAttribute() method returns the value of the attribute provided as an argument</li>
+        <li>setAttribute() can change the value of an elements attributes.  It takes 2 arguments: the attribute that you wish to change and the new value of the attribute.</li>
+        <li>Creating an Element: createElement() method that takes a tag name as a parameter and returns that element.</li>
+        <li>Creating a Text Node: document.createTextNode() method takes a parameter, which is a string containing the text that goes in the node.</li>
+        <li>Then after creating a text node we need to append the node: appendChild() method that will add another node (given as argument) as a child node.</li>
+        <li>So we Create the element node, then create the text node, then append the text node to the element node</li>
+        <li>Simpler to use textContent  : example: const flash = document.createElement('li');
+            flash.textContent = 'Flash';</li>
+        <li>A Function to Create Elements: When we created our new list item element, all we specified was the type of tag and the text inside it. These will form the parameters of our function. The function will then perform the two steps we used to create the new element, and then return that element </li>
+        <li>we can remove or replace child : removeChild()  or replaceChild()</li>
+        <li>innerHTML: returns all the child elements of an element as a string of HTML.  If an element contains lots of other elements, all the raw HTML is returned.</li>
+    </ul>
+    <h3>Chapter 7 Events</h3>
+    <ul>
+        <li>Events are another part of the DOM that provides the link between the web page and the user interactions</li>
+        <li>Event Listeners: A way for js to alert when something is happening: document.body.addEventListener("click", doSomething);</li>
+        <li>click Event: click event occurs when a user clicks a mouse, presses the Enter key, or taps the screen. </li>
+        <li>only one event handler for each event-type can be attached to an element</li>
+        <li>the code for the even handlers is hidden away in the mark up, making it difficult to find where these events have been delcared.</li>
+        <li>the js code has to be entered in a string, becareful when using apostrophes and quote marks.</li>
+        <li>The first parameter is the type of event, the second is a call back function that is invoked when the event occurs.</li>
+        <li>The Event Object: whenever an even handler is triggered by an event, the callback function is called. The function is automatically passed an event object as a parameter that contains info about the event.</li>
+        <li>function doSomething(event){console.log(event.type);</li>
+        <li>The parameter does not have to be called event.  it can be any legal variable name, although calling it <i>event</i> can make it easier to read the code.  many developers often abbreviate it to just <i>e</i></li>
+        <li>Event Target: target property returns a reference to the node that fired the event. If you change the doSomething() function it will show a message in the console telling us the node that was clicked on.</li>
+        <li>Cooridnates of an Event:  The screenX and screenY properties show the number of pixels from the left and top of the screen respectively where the event took place....The clientX and clientY properties show the number of pixels from the left and top of the client that is being used (usually the browser window)......The pageX and pageY properties show the number of pixels from the left and top, respectively, where the event took place in thedocument. This property takes account of whether the page has been scrolled.</li>
+        <li><a><href src = "https://developer.mozilla.org/en-US/docs/Web/Events" target ="_blank">Mozilla Developer Network Full list of Events</a></li>
+        <li>Mouse Events</li>
+        <li>Keyboard Events</li>
+        <li>Touch Events</li>
+    </ul>
+
+    <h2>Exercises</h2>
+    <p>Check out my console.  Thank you!</p>
 </body>
 <script src = "main.js"></script>
 </html>
