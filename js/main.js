@@ -12,6 +12,10 @@ const links = [
         label: "week3",
         url:"week3/index.html"
         
+    },
+    {
+        label: "week4",
+        url:"week4/index.html"
     }
   ]
 var weeks = document.getElementById("assignments");
