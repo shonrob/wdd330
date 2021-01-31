@@ -11,29 +11,94 @@
     <ul>
         <li>Can access a form through the DOM either: const form = document.forms[0]; or const form = document.getElementsByTagname('form')[0];</li>
         <li>Various form properties:</li>
-        <li>form.submit,</li>
-        <li>form.reset() Not ideal to use though,</li>
-        <li>form.action - used to set the attribute of a form to a different URL to be processed on the server,</li>
-        <li>focus - if an input element, the cursor is placed inside the element - like an addEventListner</li>
-        <li>blur - event when the user moves the focus away from the form element</li>
-        <li>change - event occurs when the user moves the focus away from the fom element after changing it</li>
+            <ul>
+                <li>form.submit,</li>
+                <li>form.reset() Not ideal to use though,</li>
+                <li>form.action - used to set the attribute of a form to a different URL to be processed on the server,</li>
+                <li>focus - if an input element, the cursor is placed inside the element - like an addEventListner</li>
+                <li>blur - event when the user moves the focus away from the form element</li>
+                <li>change - event occurs when the user moves the focus away from the fom element after changing it</li>
+            </ul>
         <li>Form Controls:</li>
-        <li>input - fields, including text, passwords, check boxes, radio buttons, and file uploads</li>
-        <li>select - menus for drop-down lists of options</li>
-        <li>textarea - elements for longer text entry </li>
-        <li>button - elements for submitting and resetting forms</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+            <ul>
+                <li>input - fields, including text, passwords, check boxes, radio buttons, and file uploads</li>
+                <li>select - menus for drop-down lists of options</li>
+                <li>textarea - elements for longer text entry </li>
+                <li>button - elements for submitting and resetting forms</li>
+            </ul>
+    </ul>
+    <h3>Chapter 12-Object-Oriented Programming in JavaScript - OOP</h3>
+    <ul>
+        <li>Seperating the code into objects that have properties and methods.</li>
+        <li>Three main concepts in OOP:</li>
+            <ul>
+                <li>encapsulation</li>
+                <li>polymorphism</li>
+                <li>inheritance</li>
+            </ul>
+        <li>Encapsulation</li>
+            <ul>
+                <li>the inner workings are kept hidden "inside" the object and only the essential functionalities are exposed to the end user.</li>
+                <li>Keep all the programming logic inside an object and make methods available to implement the functionality, without the "outside" world needing to know how it is done.</li>
+            </ul>
+        <li>Polymorphism</li>
+            <ul>
+                <li>various objects can share the same method, but also have the ability to override shared methods with a more specific implementation</li>
+                <li>another words all appliances get turned on differently, but what the machine does is different in how it works</li>
+            </ul>
+        <li>Inheritance</li>
+            <ul>
+                <li>Take an object that already exists and inherit all its properties and methods.</li>
+                <li>Then we can improve its functionality by adding new properties and methods.</li>
+            </ul>
+        <li>Constructor Functions</li>
+            <ul>
+                <li><i>this</i> is used to represent the object that will be returned by the constructor function.</li>
+            </ul>
+        <li>Built-in Constructor Functions</li>
+            <ul>
+                <li>Easiest way to create a new oject is to use the literal syntax.</li>
+                    <ul>
+                       <li>const literalObject = {};</li> 
+                        <li>returns: {}</li>
+                    </ul>
+                <li>It's also possible to use the Object constructor function:</li>
+                    <ul>
+                        <li>constructedObject = new Object();</li>
+                        <li>returns{}</li>
+                    </ul>
+                <li>A literal is still considered to be an instance of the Object constructor;</li>
+                    <ul>
+                        <li>literalObject instanceof Object;</li>
+                        <li>returns: true</li>
+                    </ul>
+                <li>Easiest way to create an array is to use the literal syntax:</li>
+                    <ul>
+                        <li>const literalArray = [1,2,3];</li>
+                        <li>returns: [1,2,3]</li>
+                    </ul>
+                <li>An alternative is to use the Array Constructor Function:</li>
+                    <ul>
+                        <li>constructedArray = new Array (1,2,3);</li>
+                        <li>returns: [1,2,3]</li>
+                    </ul>
+            </ul>
+    </ul>
+    <h3>Chapter 15-Modern JavaScript - Modular JavaScript</h3>
+    <ul>
+        <li>A module is a self-contained piece of code that provides functions and methods that can be used in other files and by other modules.</li>
+        <li>It helps keep code organized in seperate, reusable files, which improves code maintaiability.</li>
+        <li>It should serve one purpose, and group together functions with distince functionality.</li>
+        <li>Coupling</li>
+            <ul>
+                <li>Coupling code refers to how dependent certain elements or modules of code are on each other.</li>
+                <li>If two pieces of code are tightly coupled, they rely on each other to run.  If you change one you have to change the other.</li>
+                <li>If two pieces of code are loosley couple, when one piece of code can subsitute by another without affecting the final outcome. This is achieved by referring to common methods that are shared by the alternative modules.  Such as a connect() method.  Loosely connected is ideal code.</li>
+            </ul>
     </ul>
 
-
     <h2>Exercises</h2>
-    <p>Check out my console.  Thank you!</p>
+    <p>Work in console and through alerts</p>
 </body>
 <script src = "main.js"></script>
 </html>
