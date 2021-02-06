@@ -20,6 +20,10 @@ const links = [
     {
         label: "week5",
         url:"week5/index.html"
+    },
+    {
+        label:"challengeOne",
+        url:"challengeOneProject/index.html"
     }
   ]
 var weeks = document.getElementById("assignments");

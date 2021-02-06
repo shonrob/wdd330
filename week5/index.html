@@ -7,8 +7,31 @@
 </head>
 <body>
     <h2>Notes</h2>
-    <h3></h3>
-
+    <h3>Testing and Debuggin</h3>
+    <ul>
+        <li>alert() - stops the program from running until OK is clicked.</li>
+        <li>console.trace() method will log an interactive stack trace to the console.  This shows the functions that were called in the lead up to an exception occuring while the code is running.</li>
+        <li>debugger: breakpoints in the code that will pause the execution and allow the programer to see where the program is currently at.</li>
+            <ul>
+                <li>hover: over any variable to seew hat value it currently holds.</li>
+                <li>Don't forget to remove the break point so when others go to use the code the code can execute throughly.</li>
+            </ul>
+        <li>Error Objects</li>
+            <ul>
+                <li>EvalError: used to identify errors when using the global eval() function.</li>
+                <li>RangeError: thrown whena number is outside an allowable range in values.</li>
+                <li>ReferenceError: thrown when a reference is made to an item that doesn't exist.</li>
+                <li>SyntaxError: thrown when there's an error in teh code's syntax.</li>
+                <li>TypeError: thrown when there's an error in the type of value used.</li>
+                <li>URIError: thrown when there's a probelm encoding and decoding the URI</li>
+                <li>InternalError: is a non-standard error that is thrown when an error occurs in the JavaScript engine.--a common cause of this is too much recursion.</li>
+                <li>Since error objects have a series of properties they are often used inconsistently across browsers. To be safe the: </li>
+                    <ul>
+                        <li><i>name</i> property returns the name of the error constructor function used as a string, such as 'Error' or 'ReferenceError'.</li>
+                        <li><i>message</i> property returns a description of the error and should be provided as a argument to the Error constructor function.</li>
+                        <li><i>stack</i> property will return a stack trace for that error.  This is a non-standard property and it's recommended that it is not safe to use in production sites.</li>
+                    </ul>
+            </ul>
 
     <h2>Exercises</h2>
 
