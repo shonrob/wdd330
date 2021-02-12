@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Montserrat&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    margin: auto;
+    min-width: 250px;
+    max-width: 600px;
+}
+
+div{
+    background-color: #264653;
+    padding: 5px;
+}
+
+header{
+    background: #e9c46a;
+    color: #264653;
+    font-family: 'Alice', serif;
+    font-size: 2rem;
+    padding: 15px;
+    text-align: center;
+}
+
+form{
+    color: #264653;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+p, input{
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    min-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul{
+    padding: 8px 8px 8px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.btn {
+    border: none;
+    background: none;
+    font-size: 20px;
+}
+
+/* font awesome icons  */
+.fas.fa-plus{
+    color:#e9c46a;
+    font-size: 30px;
+}
+
+.far.fa-circle{
+    color: #e9c46a;
+}
+
+.fas.fa-trash-alt{
+    color: #9A8C98;
+}
+
+.fas.fa-check-circle{
+    color: #e9c46a;
+}
+
