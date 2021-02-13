@@ -16,15 +16,23 @@
             <ul id="list">
             </ul>
             <div>
-                
+                <form id="addItem">
+                    <input id="addItemField" type="text" placeholder="today I'm going to...." autocomplete="off">
+                    <button id="addButton" class="btn"><i class="fas fa-plus"></i></button>
+                </form>
+            </div>
+            <div >
+                <div>
+                    <span id="taskCount"> </span>
+                </div>
+                <div class="filterBtn">
+                    <button id="all" class="btn filterBtn">All</button>
+                    <button id="incomplete" class="btn filterBtn">Active</button>
+                    <button id="complete" class="btn filterBtn">Completed</button>
+                </div>
             </div>
         </div>
-        <div>
-            <form id="addItem">
-                <input id="addItemField" type="text" placeholder="today I'm going to...." autocomplete="off">
-                <button id="addButton" class="btn"><i class="fas fa-plus"></i></button>
-            </form>
-        </div>
+
     </div>
     <script type= "module" src="utilities.js"></script>
 </body>

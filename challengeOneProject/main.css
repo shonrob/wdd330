@@ -50,12 +50,23 @@ li{
     flex-direction: row;
 }
 
+span {
+    color: #9A8C98;
+    font-family: 'Montserrat', sans-serif;
+}
+
 .btn {
     border: none;
     background: none;
     font-size: 20px;
 }
 
+.filterBtn {
+    color: #9A8C98; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 /* font awesome icons  */
 .fas.fa-plus{
     color:#e9c46a;
@@ -74,3 +85,22 @@ li{
     color: #e9c46a;
 }
 
+.complete{
+    text-decoration: line-through;
+    display: flex;
+}
+
+#complete:hover, #incomplete:hover, #all:hover {
+    background-color: #e9c46a
+}
+
+#complete:active, #incomplete:active, #incomplete:active {
+  background-color: #264653;
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
+}
+
+.incomplete {
+    display: flex;
+    text-decoration: none;
+}

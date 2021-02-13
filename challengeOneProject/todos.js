@@ -23,8 +23,14 @@ function populateDataArray(data){
     toDos = data
 }
 
+function toggleStatus(id) {
+    // us id to find correct todo
+    let indexId = toDos.findIndex(toDo => toDo.id === parseInt(id));
+    //change complete status of that todo
+    toDos[indexId].completed = !toDos[indexId].completed;
+    //update LS
+    populateLs(toDos); 
+}
 
-
-
-export {toDos, makeNewToDoItem, toRemoveItem, populateDataArray};
+export {toDos, makeNewToDoItem, toRemoveItem, populateDataArray, toggleStatus};
 
