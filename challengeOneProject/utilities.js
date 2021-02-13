@@ -128,7 +128,6 @@ function toggleCompleteStatus() {
         let allArray = Array.from(document.querySelectorAll("#list li"));
         //grab the class name of the id
         let buttonId = e.target.id;
-
         if(buttonId == "all") {
           allArray.forEach((toDos) => toDos.setAttribute("style", "display: flex"));
           count = allArray.length; 
