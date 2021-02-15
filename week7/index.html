@@ -2,19 +2,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 3 Functions, Objects</title>
+    <title>Week 11 Furthering Functions, AJAX</title>
     <link rel="stylesheet" href="../week2/main.css" />
 </head>
 <body>
     <h2>Notes</h2>
     <h3>Chapter 11-Furthering Functions</h3>
     <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <ul>
+            Call and Apply Methods
+            <li>call() method can be used to set the value of <i>this</i> inside a function to an object that is provided as the first argument.</i></li>
+            <li>Create some objects that a property, then us the call() method to invoke a function, providing that each object as an argument. It will take the value of <i>this</i> in the function.</i></li>
+            <li>The apply() method works in the same way, except the arguments of the function are provided as an array, even if there is only one argurment.</li>
+        </ul>
+        <ul>Immediately Invoked Function Expressions
+            <li>An Immediately Invoked Function Express is an anonymous function that, as the name suggest, is invoked as soon as it's defined.</li>
+            <li>These are a useful way of performing a task while keeping any variables wrapped up within the scope of the function.  So the global namespace is not polluted with lots of variable names.</li>
+        </ul>
+        <ul>Temporary variables
+            <li>You cannot remove a variable from a scope once it has been declared.</li>
+        </ul>
+        <ul>Initialization Code 
+            <li>An immediately invoked function expression can be used to set up any initialization code that there'll be no need for again.</li>
+            <li>The code can only be run once. There is no need to to create any reusable, name function, and all the variables will also be temporary.</li>
+        </ul>
+        <ul>Functions that Define and Rewrite themselves
+            <li>Because JavaScript is dynamic it can call itself, define itself, and redefine itself.  It is done through assigning an anonymous function. To a variable that has the same name as the function. </li>
+            <li>If properties have been defined on the first set of the function, those will be lost wehn the function redefines it self.</li>     
+        </ul>
+        <ul>Recursive Functions
+            <li>A recursive Funtion is one that invokes itself until a certain condition is met.  </li>
+            <li>It's a useful tool to use when iterative processess are involved.</li>
+        </ul>
+        <ul>    
+            <li>A promise represents the future result of an asynchronous operation. Promises don't do anything different than a callback but they simplify the process and avoid the convoluted code that could cause multiple callbacks.</li>            
+            <li>When a promise is created it calls an asynchronous operation that is said to be pending.  It stays in that state while the operation is taking place.  This is known as to be <i>unsettled</i> Once the operation has completed, the promise is <i>settled</i></li>
+            <li><s>Resolved</s>the ansynchronous operation was completed successfully.</li>
+            <li><s>Rejected</s>the ansynchronous operation didn't work as expected, wasn't succesfully completed or resulted in an error.</li>
+            <li>A promise is created using a constructor function. This takes a function called an <s>executor</s> as an argument. The executor initializes the promise and starts the asynchronous operation. It accepts two functions as arguments: the resolve() function if function is successful. And the reject() function is called if the operations fail.</li>
+            <ul>Dealing with a Settled Promises
+                <li><i>then()</i>method can be used to deal with the outcome.  The method accepts 2 arguments. The first is a fulfilment function that's called when the promise is resolved.  Any data returned from the resolve() function will be passed along this function. The second argument is a rejection function that's called if the promise is rejected.</li>
+                <li>Alternatively, the <i>catch</i> method can be used to specify what to do if the operations fails instead.</li>
+                <li>The <i>then()</i>and the <i>catch()</i> methods can be chained together to form a succinct description of how to deal with the outcome of the promise.</li>
+                <li></li>
+                <li></li>
+            </ul>
+        </ul>
         <li></li>
         <li></li>
         <li></li>
