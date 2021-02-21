@@ -27,10 +27,12 @@ const links = [
     },
     {
         label: "week7",
-        url:"week7/index.html",
+        url:"week7/index.html"
+        
+    },
+    {
         label: "drumKitProject",
         url:"drumpKitProject/index.html"
-        
     }
   ]
 var weeks = document.getElementById("assignments");
