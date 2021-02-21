@@ -44,19 +44,38 @@
                 <li><i>then()</i>method can be used to deal with the outcome.  The method accepts 2 arguments. The first is a fulfilment function that's called when the promise is resolved.  Any data returned from the resolve() function will be passed along this function. The second argument is a rejection function that's called if the promise is rejected.</li>
                 <li>Alternatively, the <i>catch</i> method can be used to specify what to do if the operations fails instead.</li>
                 <li>The <i>then()</i>and the <i>catch()</i> methods can be chained together to form a succinct description of how to deal with the outcome of the promise.</li>
-                <li></li>
-                <li></li>
             </ul>
         </ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <ul>Functional Programing
+            <li>JavaScript has always supported function-style programming because the functions are being first-class objects.</li>
+            <li>The ability to pass functions as arguments, return them from other functions, and use anonymous functions is what allows JS to excel.</li>
+            <li>JavaScript is a multi-paradigm language.</li>
+            <li>A pure function is a function that adheres to the following rules.</li>
+                <ol>
+                    <li>The return value of a pure function should only depend on the values provided as arguments.  It doesn't rely on values from somewhere else in the program.</li>
+                    <li>There aren't side effects. A pure function doesn't change any values or data elsewhere in the program.  It only makes non-destructive data transformations and returns new values, rather than altering any of the underlying data.</li>
+                    <li>Referential transparency.  Given the same argurments, a pure function will always return the same result.</li>
+                        <ul>
+                            A Pure Functions must have
+                            <li>At least one argument; otherwise the return value must depend on something other than the arguments of the function, break the firsst rule</li>
+                            <li>A return value; otherwise there's no point in the function (unless it has changed somehting else in the program- in which case, it broken the 'no side-effects' rule).</li>
+                        </ul>
+                </ol>
+            <li>Functional programing uses pure functions as the building blocks of a program.</li>
+        </ul>
+        <ul>Higher-Order Functions
+            <li>High-order functions are functions that accept another function as an argument, or return another funtion as a result, or both.</li>
+            <li>Closures are used extensively in higher-order functions as they allow us to create a generic function that can be used to then return more specific functions based on its arguments. This is done by creating a closure around a function's arguments that keep them 'alive'.</li>
+        </ul>
+    </ul>
+    <h3>AJAX</h3>
+    <ul>
+        <li>Ajax is a technique that allows web pages to communicate asynchronously with a server, and it dynamically updates web pages without reloading.  Enabling the data to be sent and received in the background, as well as portions of the page to be updated in response to user events, while the rest of the program continues to run.</li>
+        <li>Typically a server is needed to run Ajax.  A server side language like PHP, Ruby, Node.js or .NET help serve the data response following an Ajax request.</li>
+            <ul>Basic Usage
+                <li>The Fetch API provides a global fetch() method that only has one mandatory argument, which is the URL of the resource that is fetched.</li>
+
+            </ul>
     </ul>
 
     <h2>Exercises</h2>
