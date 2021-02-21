@@ -32,7 +32,7 @@ const links = [
     },
     {
         label: "drumKitProject",
-        url:"drumpKitProject/index.html"
+        url:"drumKitProject/index.html"
     }
   ]
 var weeks = document.getElementById("assignments");
