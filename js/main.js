@@ -28,7 +28,6 @@ const links = [
     {
         label: "week7",
         url:"week7/index.html"
-        
     },
     {
         label: "drumKitProject",
