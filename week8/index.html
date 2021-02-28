@@ -2,14 +2,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 8</title>
+    <title>Week 8 CSS Animations</title>
     <link rel="stylesheet" href="../week2/main.css" />
 </head>
 <body>
     <h2>Notes</h2>
-    <h3></h3>
+    <h3>Chapter 8:CSS3 Transforms and Transitions</h3>
+    <ul>Transforms
+        <li><b>transform</b> property allows you to translate, rotate, scale, and/or skey any element on the page.</li>
+        <li>Transforms don't work on inline elements.  So be sure to display: inline-block;</li>
+        <li>If you rotate before translating, your translate direction will be on the rotated axis.</li>
+    </ul>
+    <ul>Translation
+        <li><b>translate</b> functions allow you to move elements left, right, up, or down. </li>
+        <li>When using translation function, the element moves without impacting the flow of the document</li>
+        <li>Unlike <b>position: relative</b> which allows you to position an element either against its current position or against a parent or other ancestor, a translated element can only be moved relative to its current position.</li>
+        <li>translate(x,y) function moves an element x from left and y from the top.</li>
+        <li>With translate you don't have to use both x and y you can use one or the other or both.</li>
+    </ul>
+    <ul>Scaling
+        <li><b>scale(x,y)</b> function scales an element by the defined factors horizontally then vertically.</li>
+        <li>If only one value is provided it will be used for both the x and y values. Growing/shrinking your elements while maintaining the original aspect ratio.</li>
+        <li>ie: scale(1) would leave the element the same, scale(2) would double it proportions, scale(0.5) would halve them. if you provide different values for the x and y it will distort the element.</li>
+        <li>By default the point of origin is the elements center</li>
+    </ul>
+    <ul>Rotation
+        <li><b>rotate()</b> function rotates an element around the point of origin by a specified angle value.</li>
+        <li>Angles are declared in degrees. Positive degrees move clockwise...Negative move counterclockwise.</li>
+        <li>Technically, you can use the values in grads, radians, or turns not just degrees.</li>
+    </ul>
+    <ul>Skew
+        <li><b>skew(x,y)</b> function specifies a skew along the x and y axes. <b>x</b> specifies on the x axis. <b>y</b> specifies on the y axis.  If the second parameter is omitted, the skew will only occur on the x axis.</li>
+        <li>There are axis-specific versions of the skew transform: skewX() and skewY()</li>
+    </ul>
+    <ul>Transitions
+        <li>Transitions allow the values of CSS properties to change over time.</li>
+        <ol>Steps to Create a simple transition using only CSS:
+            <li>Declare the original state of the element inthe default style declaration.</li>
+            <li>Declare the final state of the tranisitioned element..ie :hover state</li>
+            <li>Include the transition functions in your default style declarations using the transition p
+        </ol>
+                <ul><b>transition-property</b>
+                    <li>defines the CSS properties of the element that should be transitioned, with <b>all</b> for all properties being the default.</li>
+                </ul>
+                <ul><b>transition-duration</b>
+                    <li>sets how long the transition will take: the duration of time it takes to go from the default state to the transitioned state.</li>
+                    <li>It can be specified in  seconds(s) or milliseconds(ms)</li>
+                    <li>Ideal timing would be (0.2s) or (200ms)</li>
+                    <li>can be listed as 4 different properties or all four can be establish in one line of code: element {transform 0.2s ease-out 50ms; transition-property; transition-duration; transition-timing-function; transition-delay;}</li>
+                    <li><b>Multiple Transitions on an element: </b> ie: transition: transform 0.2s ease-out 50ms, color 0.1s linear 50ms;</li>
+                </ul>
+                <ul><b>transition-timing-function</b>
+                    <li>allow to control the pace of the transtion for a more granular detail.</li>
+                        <ul>most common timing functions include the key terms:
+                            <li>ease: has a slow start then it speeds up, and ends slowly</li>
+                            <li>linear: creates a transition that animates at a constant speed </li>
+                            <li>ease-in: creates a transition that is slow to start but gains speed, then stops abruptly</li>
+                            <li>ease-out:  starts at full speed, then slows progressively as it reaches the conclusion of the transition</li>
+                            <li>ease-in-out: accelerates more sharply at the beginning</li>
+                            <li>cubic-bezier(0, 0, 1, 1)</li>
+                            <a href="http://cubic-bezier.com/"><li>Cubic-Bezier</li></a>
+                            <a href="http://estelle.github.io/animation/files/cubicbezierprint.html"><li>Cubic-Bezier Animation</li></a>
+                        </ul>
+                    <li>Helpful to se a relatively long transtion-duration when testing timing functions</li>
+                </ul>
+                <ul><b>Transition-delay</b>
+                    <li>Possible to start the delay before the transition begins</li>
+                    <li>Better UI if there is a 50ms delay for action to happen to be sure the user purposely is hovering.</li>
+                    <li>When using the <b>all</b> keyword, all the properties transition at the same speed, rate, and delay. ie: transition: all 0.2s ease-out 50ms;</li>
+                </ul>
 
+
+    </ul>
     <h2>Exercises</h2>
+    <p>Projects from Wes Bos I worked on with him through his videos:</p>
+    <a href="../flexPanelGallery/index.html">Flex Panel Gallery</a>
+    <a href="../AjaxTypeAhead/index.html">Ajax Type Ahead</a>
  
 </body>
 <script src = "main.js">

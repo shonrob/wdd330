@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+  body{
+      background-image: url('obeOne.jpg');
+      height: 500px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      font-family: 'DotGothic16', sans-serif;
+  }
+
+  h1{
+    font-family: 'Monoton', cursive;
+    font-size: 5.5vw;
+    color: white;
+    text-align:center;
+
+  }
+ .output{
+    background-color: silver;
+    max-width: 200px;
+    padding: 0 20px;
+    border-radius: 8px;
+    border: 2px solid gold;  
+  }
+
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 3fr 1fr;
+
+  }
+
+  .nextprevious {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  #offcon{
+    background-color: black;
+    color: gold;
+    font-family: 'DotGothic16';
+    height: 40px;
+    width: 70px;
+  }
+
+  #previous, #next {
+    font-family: 'DotGothic16';
+    color: gold;
+    background-color: black;
+  }
+
+  #next{
+    margin-left: 20px;
+  }
+
+

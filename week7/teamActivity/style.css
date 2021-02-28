@@ -14,7 +14,7 @@ body {
 img {
     max-width: 70%;
   }
-
+ 
 li{
     display: flex;
     flex-direction: row;

@@ -59,24 +59,73 @@
         return -1;
       }
     });
+
+    // or you can write the above function:
+    //? === if that is true return 1 or -1
+    //const ordered = inventors.sort((a,b) => a.year ? 1 : -1);
     console.log(ordered);
 
-    // Array.prototype.reduce()
+    // Array.prototype.reduce()  reduce is like a for loop...
     // 4. How many years did all the inventors live all together?
-
+    //set a const to the inventors array , reduce acts like a loop, calculating the total of each inventors ages added together,
+    const totalYears = inventors.reduce((total, inventor) => {
+      //returning all the years and having the function calculate each inventor's age.
+      return total + (inventor.passed - inventor.year);
+      // 0 starts the array at 0.
+    }, 0);
+    console.log(totalYears);
     // 5. Sort the inventors by years lived
-
+    const oldest = inventors.sort(function(a,b) {
+      const lastGuy = a.passed - a.year;
+      const nextGuy = b.passed - a.year;
+      return lastGuy > nextGuy ? -1 : 1;
+    });
+    console.table(oldest);
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+    //working on this code you have to do it in the console of the web page in the browser..
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-
+    //inspect the above address in browser
+    //find the div that holds all the blvds
+    //find the class of that div
+    //               const category = document.querySelector('.mw-category');
+    // //get all the links from the dom with the .mw-category (remember the . means class);
+    // //because its a node's list--node only reads arrays--so we need to convert it the links to an array--Array.from();
+    //               const links = Array.from(category.querySelectorAll('a'));
+    //               const de = links
+    //         // gets all the links from the array
+    //                             .map(link => link.textContent)
+    //         // filters only the streetNames that include the word "de";
+    //                             .filter(streetName => streetName.includes('de'));
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    const individuals = people.sort(function(lastOne, nextOne) {
+      //get an array of the names. so we need to find what is common in those names so we can split them apart...
+      // all the names have a (', ') a comma and a space.
+        // const parts = lastOne.split(', ');
+      //because the list has a index of 0 and 1 we can put it in an [lastName, firstName];
+      //updated parts :
+        const [aLast, aFirst] = lastOne.split(', ');
+      //now we need to call the next name that comes after and sort them.
+        const [bLast, bFirst] = nextOne.split(', ');
+      //return
+        return aLast > bLast ? 1 : -1;
+    });
+    console.log(individuals);
+  
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-
+    const transport = data.reduce(function(obj, item) {
+      if(!obj[item]) {
+        obj[item] = 0;
+      }
+      obj[item]++;
+      return obj;
+    }, {});
+    console.log(transport);
+    
   </script>
 </body>
 </html>

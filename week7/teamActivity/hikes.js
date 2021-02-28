@@ -39,6 +39,7 @@ const hikeList = [
   //on load grab the array and insert it into the page on load
   
   export default class Hikes {
+    //elementId = ul "hikes"
     constructor(elementId) {
       this.parentElement = document.getElementById(elementId);
       // we need a back button to return back to the list. This will build it and hide it. When we need it we just need to remove the 'hidden' class

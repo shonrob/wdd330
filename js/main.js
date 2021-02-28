@@ -32,6 +32,10 @@ const links = [
     {
         label: "drumKitProject",
         url:"drumKitProject/index.html"
+    },
+    {
+        label: "week8",
+        url:"week8/index.html"
     }
   ]
 var weeks = document.getElementById("assignments");
