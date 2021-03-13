@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10 </title>
+    <link rel="stylesheet" href="../week2/main.css" />
+</head>
+<body>
+    <h2>Notes</h2>
+    <h3>MDN: Validating Forms</h3>
+    <ul><b>Client-side for validation:</b> helps ensure data submitted matches the requirements set forth in the various form controls.
+        <li>Security checks need to be performed on  the server-side and the client side</li>
+        <li>We want to get the right data, in the right format.</li>
+        <li>We want to protect our users' data</li>
+        <li>We want to protect oursevles.</li>
+        <ul>Different Types of Client-side validation
+            <li>Built-in form validation: better than JavaScript but not as customizable.</li>
+            <ul>
+                <li>required</li>
+                <li>minlength/maxlength</li>
+                <li>min and max</li>
+                <li>type: number, email, etc</li>
+                <li>pattern: regex</li>
+            </ul>
+            <li>JavaScript: Completely customizable, but you have to create it all or use a library.</li>
+            <ul>The Constraint Validation API
+                <li>Elements to use: button, fieldSet, input, output, select, textArea</li>
+                <li><b>properties for the elements</b>validationMessage, validity-returns a ValidityState object: patternMismatch, tooLong, maxlength, tooShort, minlength, rangeOverflow, rangeUnderflow, typeMismatch, valid, valueMissing, willValidate </li>
+                <li><b>methods</b> checkValidity(), setCustomValidity</li>
+            </ul>
+        </ul>
+    </ul>
+    <h3>MDN: Using Fetch</h3>
+    <ul>fetch()
+        <li>takes one argument- the path to the resource you want to fetch and returns a promise containing the response (a response object)</li>
+        <li>can optionally accept a second parameter, an init object that allows you to control a number of different settings.</li>
+        <li>Sending a request with credentials included: both the same-origin and a cross-orgin calls, add credentials: 'include' to the 'init' object you passed in the fetch() method..if the orgin is the same as the request URL: credentials:'same-origin'. Or you can 'omit' the credentials all together.</li>
+        <li>files can be uploaded using an HTML input type = 'file' and formData(). Also, multiple files can be used.</li>
+        <li>Body: ArrayBuffer, ArrayBufferView, Blob, string, URLSearchParams, FormData</li>
+    </ul>
+
+    <h2>Exercises</h2>
+    <p>Projects from Wes Bos I worked on with him through his videos:</p>
+    <a href ="../FunWithHtmlCanvas/">Fun with HTML Canvas</a><br>
+    <a href ="../cardioArray2/index.html">Cardio Array 2</a> <br>
+    <a href ="../holdShiftKey/index.html">Hold Shift Key and Check Checkboxes</a><br>
+    <a href ="teamActivity/index.html">Team Activity-Drum Kit</a>
+
+ 
+</body>
+<script src = "main.js"></script>
+</html>
