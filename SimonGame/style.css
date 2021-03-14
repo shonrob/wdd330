@@ -1,9 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Laila:wght@700&family=Open+Sans&display=swap');
 
+html{
+    background-color: black;
+}
 h1 {
     font-family: 'Laila', sans-serif;
+    font-size:2.5rem;
+    color: white;
+    grid-column: 3;
+    grid-row: 1;
+    place-self: center;
 }
 
 p {
- font-family: 'Open Sans', sans-serif;   
+ font-family: 'Open Sans', sans-serif; 
+ text-align: center;
+ font-size: 1.5rem;  
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 15% 20% 20% 20% 15%;
+    grid-template-rows: 30% 30% 20% 30% 20% ;
+    grid-gap:5px; 
+ 
+}
+.outer{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: solid 3px;
+}
+.middle{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: solid 3px gray;
+    background-color: lightgray; 
+    grid-column: 3;
+    grid-row: 2/3;
+    place-self: center;
+
+}
+
+.redCircle {
+    border-color: red;
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: end;
+    align-self: start;
+}
+.blueCircle {
+    border-color: blue;
+    grid-column: 3;
+    grid-row: 4;
+    justify-self: center;
+}
+.greenCircle {
+    border-color: green;
+    grid-column: 4;
+    grid-row: 3;
+    justify-self: start;
+    align-self: center;
+}
+.yellowCircle {
+    border-color: yellow;
+    grid-column: 2;
+    grid-row: 1;
+    place-self: end;
+}
+.purpleCircle {
+    border-color: purple;
+    grid-column: 4;
+    grid-row: 1;
+    justify-self: start;
+    align-self: end;
+}
+
+.score {
+    background-color:lightgray;
+    color: black;
+    width: 200px;
+    height: 110px;
+    border-radius: 5px;
+    border: solid 3px purple;
 }

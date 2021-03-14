@@ -3,17 +3,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='style.css'>
     <title>Simon Game</title>
 </head>
 <body>
-    <div class = "containter">
-        <h1>Play Simon</h1>
-        <div class = "startCircle"></div>
-        <div class = "redCircle"></div>
-        <div class = "blueCircle"></div>
-        <div class = "greenCircle"></div>
-        <div class = "yellowCircle"></div>
-        <div class = "purpleCircle"></div>
+    
+    <div class = "container">
+        <h1>Play Simon</h1>  
+        <div class = "outer yellowCircle"></div>
+        <div class = "outer purpleCircle"></div>
+        <div class = "middle startCircle">
+            <p>START</p>
+        </div>
+        <div class = "outer redCircle"></div>
+        <div class = "outer blueCircle"></div>
+        <div class = "outer greenCircle"></div> 
+        <div class = "score">
+            <p>High Score</p>
+            <div id="hiscore"></div>
+        </div>
+        
+        
     </div>
     
 </body>
