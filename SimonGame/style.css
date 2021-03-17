@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Laila:wght@700&family=Open+Sans&display=swap');
 
 html{
-    background-color: black;
+    background-color: #28262c;
 }
 h1 {
     font-family: 'Laila', sans-serif;
     font-size:2.5rem;
-    color: white;
+    color: #f4f3ed;
     grid-column: 3;
     grid-row: 1;
     place-self: center;
@@ -16,6 +16,105 @@ p {
  font-family: 'Open Sans', sans-serif; 
  text-align: center;
  font-size: 1.5rem;  
+}
+
+
+.circle {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    position: relative;
+}
+.landingPage button {
+    width: 200px;
+    height: 50px;
+    border-radius: 40px;
+    border: none;
+    background-color: #6B26BA;
+    color: #f4f3ed;
+    grid-column: 3/5;
+    grid-row: 1;
+    margin-top: 325px;
+    margin-left: 75px;
+}
+
+.landingPage input {
+    height: 50px;
+    width: 300px;
+    grid-column:3/5;
+    grid-row:1;
+    margin: 250px 0 0 -100px;
+    z-index: 2;
+    border-radius: 20px;
+    border: none;
+}
+.landingPage h1 {
+    font-size: 5rem;
+    justify-content: flex-end;
+    margin-top: -15px;
+    grid-column: 2/5;
+    z-index: 1;
+}
+.panel {
+    width: 350px;
+    height: 350px;
+    border: 5px solid #28262c;
+}
+
+.center {
+    width: 300px;
+    height: 300px;
+    background-color: #28262c;
+    border-radius: 100%;
+    margin-left: 200px;
+    margin-top: 200px;
+    position: absolute;
+}
+
+.bottom-right-panel {
+    border-bottom-right-radius: 100%;
+    background-color: #FF495C;
+    border: 5px solid #28262c;
+    grid-column: 2;
+    grid-row: 2;
+    animation: rotate 1.5s linear infinite;
+}
+
+.bottom-left-panel {
+    border-bottom-left-radius: 100%;
+    background-color: #ECC846;
+    border: 5px solid #28262c;
+    grid-column: 1;
+    grid-row: 2;
+    animation: rotate 1.5s linear infinite;
+
+}
+.top-right-panel {
+    border-top-right-radius: 100%;
+    background-color: #256EFF;
+    border: 5px solid #28262c;
+    grid-column:2;
+    grid-row:1;
+    align-self: end;
+    animation: rotate 1.5s linear infinite;
+
+}
+.top-left-panel {
+    border-top-left-radius: 100%;
+    background-color: #4CB944;
+    border: 5px solid #28262c;
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    animation: rotate 1.5s linear infinite;
+}
+@keyframes rotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
 }
 
 .container{
@@ -44,33 +143,33 @@ p {
 }
 
 .redCircle {
-    border-color: red;
+    border-color:#FF495C;
     grid-column: 2;
     grid-row: 3;
     justify-self: end;
     align-self: start;
 }
 .blueCircle {
-    border-color: blue;
+    border-color: #256EFF;
     grid-column: 3;
     grid-row: 4;
     justify-self: center;
 }
 .greenCircle {
-    border-color: green;
+    border-color: #4CB944;
     grid-column: 4;
     grid-row: 3;
     justify-self: start;
     align-self: center;
 }
 .yellowCircle {
-    border-color: yellow;
+    border-color: #ECC846;
     grid-column: 2;
     grid-row: 1;
     place-self: end;
 }
 .purpleCircle {
-    border-color: purple;
+    border-color:#6B26BA;
     grid-column: 4;
     grid-row: 1;
     justify-self: start;
@@ -79,9 +178,9 @@ p {
 
 .score {
     background-color:lightgray;
-    color: black;
+    color: #28262c;
     width: 200px;
     height: 110px;
     border-radius: 5px;
-    border: solid 3px purple;
+    border: solid 3px #6B26BA;
 }
