@@ -1,6 +1,16 @@
-// ToDo: click on the button
-// landpage
+import getLocalStorage from './localStorage.js';
+
+// ToDo: click on the button from landing page to play game
+const btnToPlay = document.getElementById("start-game");
+const landingPage = document.getElementById('landing-page');
+const gamePage = document.getElementById('game-page');
+
+
+btnToPlay.addEventListener('click', startGame);
+
 // save the name to variable
+const getName = document.getElementById("fname");
+    
 // check local storage for name
 // Pull high score save in variable highScore
 //if there is no high score set to 0.
@@ -16,10 +26,19 @@ function getPersonalScore(){
 
 }
 function startGame(){
+    const highScore = getLocalStorage().highScore;
+    const personalScore = getLocalStorage(playerName).personalScore;
+    console.log(highScore);
+    setRemoveClassHide();
+    
+};
 
+function setRemoveClassHide(){
+    landingPage.classList.add('hidden');
+    gamePage.classList.remove('hidden');
 }
 //ToDo: start game is clicked
-sequence = [];
+const sequence = [];
 
 function randomGenerator(){
     // generate numbers between 1 -5 
@@ -31,7 +50,7 @@ function playSequence() {
 }
 
 function playerSequence(){
-    pSquence = [];
+    const pSquence = [];
     // when clicked add number to pSquence
     // check pSquence === squence
     // if true repeat else game over.

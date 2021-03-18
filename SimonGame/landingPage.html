@@ -7,8 +7,7 @@
     <title>Simon Game</title>
 </head>
 <body>
-    <div class = "landingPage">
-
+    <div id ="landing-page" >
             <div class = "circle">
                 <div class="panel top-left-panel"></div>
                 <div class="panel bottom-left-panel"></div>
@@ -18,12 +17,10 @@
                 <h1>Let's Play Simon</h1>
                 <label for="fname"></label>
                 <input type="text" id="fname" name="fname" placeholder="Enter Your Name">
-                <button>Play Simon Game</button>
-   
-   </div>
-
-    </div>
-    <div class = "container" >
+                <button id="start-game" >Play Simon Game</button>
+            </div>
+    </div> 
+    <div id='game-page' class = "container hidden" >
         <h1>Play Simon</h1>  
         <div class = "outer yellowCircle"></div>
         <div class = "outer purpleCircle"></div>
@@ -37,7 +34,7 @@
             <p>High Score</p>
             <div id="hiscore"></div>
         </div>       
-    </div>
-    
+    </div>   
 </body>
+<script src="main.js" type="module"></script>
 </html>
