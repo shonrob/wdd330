@@ -27,8 +27,9 @@ function getPersonalScore(){
 }
 function startGame(){
     const highScore = getLocalStorage().highScore;
-    const personalScore = getLocalStorage(playerName).personalScore;
+    const personalScore = getLocalStorage().personalScore;
     console.log(highScore);
+    console.log(personalScore);
     setRemoveClassHide();
     
 };

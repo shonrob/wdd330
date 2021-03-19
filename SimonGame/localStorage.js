@@ -1,4 +1,4 @@
-function getLocalStorage(name) {
+function getLocalStorage() {
     const scores = {};
     scores.highScore = getHighScore();
     scores.personalScore = getPersonalScore(playerName);
@@ -13,8 +13,8 @@ function getHighScore(){
     }   
 }
 function getPersonalScore(playerName){
-    if(localStorage.getItem(playerName)){
-        return localStorage.getItem(playerName);
+    if(localStorage.getItem('personalScore')){
+        return localStorage.getItem('personalScore');
     } else {
         return 0;
     }
