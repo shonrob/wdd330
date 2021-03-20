@@ -6,7 +6,7 @@
     <link rel="stylesheet" href='style.css'>
     <title>Simon Game</title>
 </head>
-<body>
+<body> 
     <div id ="landing-page" >
             <div class = "circle">
                 <div class="panel top-left-panel"></div>
@@ -24,15 +24,18 @@
         <h1>Play Simon</h1>  
         <div class = "outer yellowCircle"></div>
         <div class = "outer purpleCircle"></div>
-        <div class = "middle startCircle">
-            <p>START</p>
+        <div id= "start" class = "middle startCircle">
+            <span>START</span>  
+        </div>
+        <div id= "round" class = "middle startCircle hidden">
+            <span>5</span>  
         </div>
         <div class = "outer redCircle"></div>
         <div class = "outer blueCircle"></div>
         <div class = "outer greenCircle"></div> 
         <div class = "score">
             <p>High Score</p>
-            <div id="hiscore"></div>
+            <div id="hi-score"></div>
         </div>       
     </div>   
 </body>

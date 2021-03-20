@@ -4,44 +4,40 @@ import getLocalStorage from './localStorage.js';
 const btnToPlay = document.getElementById("start-game");
 const landingPage = document.getElementById('landing-page');
 const gamePage = document.getElementById('game-page');
+const pname = document.getElementById("fname");
+const hscore = document.getElementById("hi-score");
+const startButton = document.getElementById("start");
 
+btnToPlay.addEventListener('click', newGame);
+startButton.addEventListener('click', startGame);
 
-btnToPlay.addEventListener('click', startGame);
-
-// save the name to variable
-const getName = document.getElementById("fname");
-    
-// check local storage for name
-// Pull high score save in variable highScore
-//if there is no high score set to 0.
-// if exists then save score into a variable
- //else set high score to 0 (variable yourScore)
-// 
-
-//todo:run when get started button is clicked
-function getHighScore(){
-
-}
-function getPersonalScore(){
-
-}
-function startGame(){
-    const highScore = getLocalStorage().highScore;
-    const personalScore = getLocalStorage().personalScore;
-    console.log(highScore);
-    console.log(personalScore);
+function newGame(){
+    const playerName = pname.value;
+    const highScore = getLocalStorage('highScore');
+    const personalScore = getLocalStorage(playerName);
     setRemoveClassHide();
-    
+    hscore.innerHTML = `<span>${highScore}</span>`;
+
 };
 
 function setRemoveClassHide(){
     landingPage.classList.add('hidden');
     gamePage.classList.remove('hidden');
 }
-//ToDo: start game is clicked
-const sequence = [];
 
+//ToDo: start game is clicked
+
+function startGame () {
+    const sequence = [];
+    sequence.push(randomGenerator());
+    console.log(sequence);
+
+    //add hidden class and remove hidden class to start button
+}
 function randomGenerator(){
+    let rand = Math.random() * (6 - 1) + 1;
+    rand = Math.floor(rand);
+    return rand; 
     // generate numbers between 1 -5 
     // sequence.push into array
 }

@@ -132,7 +132,6 @@ p {
 
 }
 
-
 .outer{
     width: 75px;
     height: 75px;
@@ -192,4 +191,9 @@ p {
     height: 110px;
     border-radius: 5px;
     border: solid 3px #6B26BA;
+}
+
+#start {
+    cursor: pointer;
+    border: 1px solid #256EFF;
 }
