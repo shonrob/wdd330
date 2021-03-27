@@ -22,22 +22,30 @@
     </div> 
     <div id='game-page' class = "container hidden" >
         <h1>Play Simon</h1>  
-        <div class = "outer yellowCircle"></div>
-        <div class = "outer purpleCircle"></div>
+        <div id='yellowCircle' class = "outer"></div>
+        <div id='purpleCircle' class = "outer"></div>
         <div id= "start" class = "middle startCircle">
             <span>START</span>  
         </div>
         <div id= "round" class = "middle startCircle hidden">
             <span>5</span>  
         </div>
-        <div class = "outer redCircle"></div>
-        <div class = "outer blueCircle"></div>
-        <div class = "outer greenCircle"></div> 
-        <div class = "score">
+        <div id="redCircle" class = "outer"></div>
+        <div id="blueCircle" class = "outer"></div>
+        <div id="greenCircle" class = "outer"></div>
+                <div class = "score">
             <p>High Score</p>
             <div id="hi-score"></div>
         </div>       
-    </div>   
+    </div> 
+    <div id="modal" class='hidden'>
+        <div class="modal-container">
+            <h1>Good Game</h1>
+            <h2>You've made it to Round <span id="rnd"></span></h2>
+
+        <button class='btn btn-primary'>Try again?</button>    
+        </div>
+    </div>  
 </body>
 <script src="main.js" type="module"></script>
 </html>
