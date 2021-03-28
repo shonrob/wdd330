@@ -149,11 +149,9 @@ function coreOperation(btnNumber) {
     ~update local storage
     ~clear score
     ~clear playername
-~ find sounds
-    ~hook up sounds
+~hook up sounds
 ~ gamepage
     ~show high score
-
 */
 
 

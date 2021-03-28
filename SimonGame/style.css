@@ -163,6 +163,7 @@ p {
 }
 #redCircle:active{
     background-color: #FF495C;
+    transform: scale(1.3);
 }
 .altRed {
     background-color: #FF495C;
@@ -180,6 +181,7 @@ p {
 
 #blueCircle:active{
     background-color: #256EFF;
+    transform: scale(1.3);
 }
 .altBlue {
     background-color: #256EFF;
@@ -197,6 +199,7 @@ p {
 }
 #greenCircle:active{
     background-color: #4CB944;
+    transform: scale(1.3);
 }
 .altGreen {
     background-color: #4CB944;
@@ -213,6 +216,7 @@ p {
 }
 #yellowCircle:active{
     background-color: #ECC846;
+    transform: scale(1.3);
 }
 .altYellow {
     background-color: #ECC846;
@@ -229,7 +233,8 @@ p {
         background-color 0.2 ease-out;
 }
 #purpleCircle:active{
-    background-color: #6B26BA
+    background-color: #6B26BA;
+    transform: scale(1.3);
 }
 .altPurple {
     background-color: #6B26BA;
