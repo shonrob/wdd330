@@ -1,5 +1,6 @@
-import getLocalStorage from './localStorage.js';
-import * as bootstrap from "https://cdn.skypack.dev/bootstrap@4.6.0";
+import {getLocalStorage, setLocalStorage} from "./localStorage.js";
+
+
 
 const sequence = [];
 const playerSquence = [];
@@ -20,6 +21,9 @@ const purple = document.getElementById("purpleCircle");
 const red = document.getElementById("redCircle");
 const blue = document.getElementById("blueCircle");
 const green = document.getElementById("greenCircle");
+const roundElement = document.getElementById("round");
+const roundModal = document.getElementById("rnd");
+const modal = document.getElementById("modal");
 
 
 btnToPlay.addEventListener('click', newGame);
@@ -29,6 +33,7 @@ purple.addEventListener('click', function() {coreOperation(2)});
 red.addEventListener('click', function() {coreOperation(3)});
 blue.addEventListener('click', function() {coreOperation(4)});
 green.addEventListener('click', function() {coreOperation(5)});
+modal.addEventListener('click', resetGame);
 
 
 function newGame(){
@@ -48,13 +53,14 @@ function setRemoveClassHide(){
 //ToDo: start game is clicked
 
 function startGame () {
+    startButton.classList.add('hidden');
+    roundElement.classList.remove('hidden');
     gameStarted = true;
     round = 1;
+    roundElement.innerHTML = `<span>${round}</span>`;
     sequence.push(randomGenerator());
-    console.log(sequence);
     playSequence(sequence, 0);
-    //update round
-    //add hidden class and remove hidden class to start button
+
 }
     // generate numbers between 1 -5 
 function randomGenerator(){
@@ -109,7 +115,6 @@ function playSequence(_squence, index) {
         }, 800)
 };
 
-    //forEach animate and sound cooresponding with the color
 
     // sequence.push into array
 function coreOperation(btnNumber) {
@@ -121,37 +126,49 @@ function coreOperation(btnNumber) {
             if(sequence.length === index +1){
                 setTimeout(function(){
                     playerSquence.length = 0;
-                    round += 1;
+                    round++
+                    roundElement.innerHTML = `<span>${round}</span>`;
                     sequence.push(randomGenerator());
                     playSequence(sequence, 0);
                     console.log("new round");
                     return;  
-                }, 2000);
+                }, 1000);
             }
             return;
         } else { 
-            //you loose modal
+           modal.classList.remove('hidden');
+           if(round <= highScore) {
+                roundModal.innerHTML = `You made it to Round ${round}`;
+           } else {
+            roundModal.innerHTML = `You made the New High Score of ${round}! Steller Job!!`;
+           }
+            
         }
     })
 }
 
+function resetGame(){
+    modal.classList.add('hidden');
+    gamePage.classList.add('hidden');
+    landingPage.classList.remove('hidden');
+    startButton.classList.remove('hidden');
+    roundElement.classList.add('hidden');
+    if(round > highScore) {
+        highScore = round;
+    }
+    if(round > personalScore) {
+        personalScore = round;
+    }
+    setLocalStorage(playerName, personalScore, highScore);
+}
+
 /*
 
-~hook up round
-~on gameOver remove hidden class on modal
-~round numbers into modal..
-    ~make selector for rnd inner html to access in modal
-~hide start button
-~modal try again button
-    ~hide modal
-    ~hide gamescreen
-    ~show main screen
-    ~update local storage
-    ~clear score
-    ~clear playername
+
 ~hook up sounds
 ~ gamepage
     ~show high score
+~disable button to start game unless they put in their name
 */
 
 
@@ -166,15 +183,7 @@ function gameOver() {
 }
 
 
-// ToDo: localStorage 
-function setLocalStorage(){
-    //check to see if name exists if so update else create new
-    //check to see if highScore exists if so update else create new
-}
 
-function resetGame(){
-    //go back to landing page.
-}
 
 
 

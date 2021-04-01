@@ -31,8 +31,7 @@
         <div id= "start" class = "middle startCircle">
             <span>START</span>  
         </div>
-        <div id= "round" class = "middle startCircle hidden">
-            <span>5</span>  
+        <div id= "round" class = "middle startCircle hidden">  
         </div>
         <div id="redCircle" class = "outer">
             <audio src="http://www.chiptape.com/chiptape/sounds/medium/mario%20jump.wav"></audio>
@@ -43,17 +42,18 @@
         <div id="greenCircle" class = "outer">
             <audio src="http://www.chiptape.com/chiptape/sounds/medium/mario%20stomp.wav"></audio>
         </div>
-                <div class = "score">
+        <div class = "score">
             <p>High Score</p>
-            <div id="hi-score"></div>
+
+        <div id="hi-score"></div>
+
         </div>       
     </div> 
     <div id="modal" class='hidden'>
         <div class="modal-container">
             <h1>Good Game</h1>
-            <h2>You've made it to Round <span id="rnd"></span></h2>
-
-        <button class='btn btn-primary'>Try again?</button>    
+            <h2 id="rnd"></h2>
+        <button>Try again?</button>    
         </div>
     </div>  
 </body>
