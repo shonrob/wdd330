@@ -10,10 +10,12 @@
     <div id ="landing-page" >
             <div class = "circle">
                 <div class="panel top-left-panel"></div>
-                <div class="panel bottom-left-panel"></div>
                 <div class="panel top-right-panel"></div>
+                <div class="panel bottom-left-panel"></div>
                 <div class="panel bottom-right-panel"></div>        
                 <div class=" center"></div>
+            </div>
+            <div class="start">
                 <h1>Let's Play Simon</h1>
                 <label for="fname"></label>
                 <input type="text" id="fname" name="fname" placeholder="Enter Your Name">
@@ -21,33 +23,33 @@
             </div>
     </div> 
     <div id='game-page' class = "container hidden" >
-        <h1>Play Simon</h1>  
-        <div id='yellowCircle' class = "outer">
-            <audio  src="http://www.chiptape.com/chiptape/sounds/medium/mario%20ah.wav"></audio>
-        </div>
-        <div id='purpleCircle' class = "outer">
-            <audio src="http://www.chiptape.com/chiptape/sounds/medium/mario%20coin.wav"></audio>
-        </div>
-        <div id= "start" class = "middle startCircle">
-            <span>START</span>  
-        </div>
-        <div id= "round" class = "middle startCircle hidden">  
-        </div>
-        <div id="redCircle" class = "outer">
-            <audio src="http://www.chiptape.com/chiptape/sounds/medium/mario%20jump.wav"></audio>
-        </div>
-        <div id="blueCircle" class = "outer">
-            <audio src="http://www.chiptape.com/chiptape/sounds/medium/mario%20kick.wav"></audio>
-        </div>
-        <div id="greenCircle" class = "outer">
-            <audio src="http://www.chiptape.com/chiptape/sounds/medium/mario%20stomp.wav"></audio>
-        </div>
         <div class = "score">
             <p>High Score</p>
-
-        <div id="hi-score"></div>
-
-        </div>       
+            <div id="hi-score"></div>
+        </div> 
+        <h1>Play Simon</h1> 
+        <div class = "score">
+            <p>Personal Score</p>
+            <div id="personal-score"></div>
+        </div>   
+        <div class="circles-container"> 
+            <div id='yellowCircle' class = "outer">
+            </div>
+            <div id='purpleCircle' class = "outer">
+            </div>
+            <div id= "start" class = "middle startCircle">
+                <span>START</span>  
+            </div>
+            <div id= "round" class = "middle startCircle hidden">
+            </div>
+            <div id="redCircle" class = "outer">
+            </div>
+            <div id="blueCircle" class = "outer">
+            </div>
+            <div id="greenCircle" class = "outer">
+            </div>
+        </div>
+     
     </div> 
     <div id="modal" class='hidden'>
         <div class="modal-container">

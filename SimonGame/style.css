@@ -7,9 +7,6 @@ h1 {
     font-family: 'Laila', sans-serif;
     font-size:2.5rem;
     color: #f4f3ed;
-    grid-column: 3;
-    grid-row: 1;
-    place-self: center;
 }
 
 p {
@@ -23,10 +20,28 @@ p {
 }
 
 /* landingPage  */
-.circle {
+
+#landing-page{
     display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr;
+
+}
+
+.start-game-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.circle {
+    /* display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    position: relative; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     position: relative;
 }
 #landing-page button {
@@ -36,29 +51,32 @@ p {
     border: none;
     background-color: #6B26BA;
     color: #f4f3ed;
-    grid-column: 3/5;
+    margin: 0 100px;
+    /* grid-column: 3/5;
     grid-row: 1;
     margin-top: 325px;
-    margin-left: 150px;
+    margin-left: 150px; */
 }
 
 #landing-page input {
     height: 50px;
     width: 300px;
-    grid-column:3/5;
+    /* grid-column:3/5;
     grid-row:1;
-    margin: 250px 0 0 50px;
-    z-index: 2;
+    margin: 250px 0 0 50px; */
     border-radius: 40px;
     border: none;
     padding: 20px;
+    margin-bottom: 10px;
 }
 #landing-page h1 {
     font-size: 5rem;
-    justify-content: flex-end;
+    /* justify-content: flex-end;
     margin-top: -15px;
     grid-column: 2/5;
     z-index: 1;
+    grid-row: 1;
+    place-self: center; */
 }
 .panel {
     width: 350px  ;
@@ -71,17 +89,19 @@ p {
     height: 300px;
     background-color: #080708;
     border-radius: 100%;
-    margin-left: 220px;
-    margin-top: 220px;
+    place-self: center;
     position: absolute;
+    /* margin-left: 220px;
+    margin-top: 220px;
+    position: absolute; */
 }
 
 .bottom-right-panel {
     border-bottom-right-radius: 100%;
     background-color: #FF495C;
     border: 5px solid #080708;
-    grid-column: 2;
-    grid-row: 2;
+    /* grid-column: 2;
+    grid-row: 2; */
     animation: rotate 2s linear -0.5s infinite;
 }
 
@@ -89,8 +109,9 @@ p {
     border-bottom-left-radius: 100%;
     background-color: #ECC846;
     border: 5px solid #080708;
-    grid-column: 1;
-    grid-row: 2;
+    justify-self: end;
+    /* grid-column: 1;
+    grid-row: 2; */
     animation: rotate 2s linear -1s infinite;
 
 }
@@ -98,8 +119,8 @@ p {
     border-top-right-radius: 100%;
     background-color: #256EFF;
     border: 5px solid #080708;
-    grid-column:2;
-    grid-row:1;
+    /* grid-column:2;
+    grid-row:1; */
     align-self: end;
     animation: rotate 2s linear infinite;
 
@@ -108,9 +129,10 @@ p {
     border-top-left-radius: 100%;
     background-color: #4CB944;
     border: 5px solid #080708;
-    grid-column: 1;
+    justify-self: end;
+    /* grid-column: 1;
     grid-row: 1;
-    align-self: end;
+    align-self: end; */
     animation: rotate 2s linear 0.5s infinite;
 }
 @keyframes rotate {
@@ -121,23 +143,36 @@ p {
         filter: brightness(100%);
     }
 }
-
+/* end of landing-page  */
+/* ------------------------------------------------------------------ */
 /* gamePage  */
 .container {
     display: grid;
-    grid-template-columns: 15% 20% 20% 20% 15%;
-    grid-template-rows: 30% 30% 20% 30% 20% ;
-    grid-gap:5px; 
-    justify-content: center;
-    align-items: center;
+    grid-template-rows: 1fr 3fr;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+#game-page h1 {
+    grid-column: 2;
+    grid-row: 1;
     text-align: center;
 }
 
+.circles-container {
+    grid-column: 1/4;
+    grid-row: 2;
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+
+}
 .outer{
     width: 75px;
     height: 75px;
     border-radius: 50%;
     border: solid 3px;
+    position: absolute;
 }
 .middle{
     width: 150px;
@@ -145,18 +180,13 @@ p {
     border-radius: 50%;
     border: solid 3px gray;
     background-color: lightgray; 
-    grid-column: 3;
-    grid-row: 2/3;
-    place-self: center;
+
 
 }
 
 #redCircle {
     border-color:#FF495C;
-    grid-column: 2;
-    grid-row: 3;
-    justify-self: end;
-    align-self: start;
+    left: 35%;
     transition: 
         transform .05s ease, 
         background-color 0.2 ease-out;
@@ -164,6 +194,7 @@ p {
 #redCircle:active{
     background-color: #FF495C;
     transform: scale(1.3);
+
 }
 .altRed {
     background-color: #FF495C;
@@ -171,9 +202,7 @@ p {
 }
 #blueCircle {
     border-color: #256EFF;
-    grid-column: 3;
-    grid-row: 4;
-    justify-self: center;
+    right: 35%;
     transition:
         transform .05s ease, 
         background-color 0.2 ease-out;
@@ -189,10 +218,7 @@ p {
 }
 #greenCircle {
     border-color: #4CB944;
-    grid-column: 4;
-    grid-row: 3;
-    justify-self: start;
-    align-self: center;
+    bottom: 0%;
     transition: 
         transform .05s ease, 
         background-color 0.2 ease-out;
@@ -207,12 +233,12 @@ p {
 }
 #yellowCircle {
     border-color: #ECC846;
-    grid-column: 2;
-    grid-row: 1;
-    place-self: end;
+    top: 0;
+    left: 40%;
     transition: 
         transform .05s ease, 
         background-color 0.2 ease-out;
+    
 }
 #yellowCircle:active{
     background-color: #ECC846;
@@ -224,10 +250,8 @@ p {
 }
 #purpleCircle {
     border-color:#6B26BA;
-    grid-column: 4;
-    grid-row: 1;
-    justify-self: start;
-    align-self: end;
+    top: 0;
+    right: 40%;
     transition:
         transform .05s ease, 
         background-color 0.2 ease-out;
@@ -241,11 +265,20 @@ p {
     transform: scale(1.3);
 }
 
-#hi-score {
+#hi-score, #personal-score {
     font-family: 'Open Sans', sans-serif; 
     text-align: center;
     font-size: 1.5rem;
     margin-top: -20px;
+}
+#hi-score {
+    grid-column: 1;
+    grid-row:1;
+
+}
+#personal-score {
+    grid-column: 3;
+    grid-row: 1;
 }
 
 .score {
@@ -255,14 +288,23 @@ p {
     height: 110px;
     border-radius: 5px;
     border: solid 3px #6B26BA;
+    justify-self: center;
+    align-self: center;
 }
 
-#start {
+#start, #round {
     cursor: pointer;
     border: 1px solid #256EFF;
-    text-align: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
+#start span, #round span {
+    font-family: 'Laila', sans-serif;
+    font-size:2rem;
+
+}
+/* end of game-page */
 
 /* modalpage   */
 
@@ -299,3 +341,17 @@ p {
 #modal h2 {
     margin-top: 0;
 }
+
+@media only screen and (max-width: 400px) {
+
+    .outer{
+        width: 25px;
+        height: 25px;
+    }
+
+    .middle{
+        width: 60px;
+        height: 60px;
+    }
+}
+
