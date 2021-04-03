@@ -44,6 +44,10 @@ const links = [
     {
         label: "week10",
         url:"week10/index.html"
+    },
+    {
+        label: "Simon Game",
+        url:"SimonGame/landingPage.html"
     }
   ]
 var weeks = document.getElementById("assignments");
