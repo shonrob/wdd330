@@ -151,7 +151,7 @@ function coreOperation(btnNumber) {
     }
     if(!gameStarted) return;
     playerSquence.push(btnNumber);
-    // for(playerSquence(int, index))
+    // for(playerSquence(int, index) = 0; playSequence(int,index)>= squence.length )
     playerSquence.forEach((int, index) =>{
         if(int === sequence[index]){
             if(sequence.length === index +1){
